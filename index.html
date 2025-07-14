@@ -1,0 +1,23 @@
+### File: templates/index.html
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Hand Gesture Recognition</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
+</head>
+<body>
+<div class="container">
+    <h1>🖐 Hand Gesture Recognition</h1>
+    <div class="status-box">
+        <p><strong>Current Gesture:</strong> <span id="gesture">Loading...</span></p>
+        <p><strong>Brightness:</strong> <span id="brightness">Loading...</span></p>
+    </div>
+    <div class="video-box">
+        <img src="{{ url_for('video_feed') }}" alt="Live Feed" />
+    </div>
+</div>
+<script src="{{ url_for('static', filename='js/update.js') }}"></script>
+</body>
+</html>
